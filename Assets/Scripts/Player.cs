@@ -41,4 +41,20 @@ public class Player : MonoBehaviour {
 
         
 	}
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //chck if the thing we bumped into is an enemy
+
+        if (collision.collider.GetComponent<Enemy>())
+        {
+            //die
+
+            Destroy(gameObject);
+
+        }
+    }
+
+
 }
